@@ -1,0 +1,101 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    overflow: hidden;
+}
+
+/* Tela inicial */
+#startScreen {
+    text-align: center;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #21a1f1;
+}
+
+/* Área do jogo */
+#gameContainer {
+    position: relative;
+    width: 90vw;
+    height: 70vh;
+    background-color: #20232a;
+    border: 2px solid #61dafb;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+#score, #lives {
+    position: absolute;
+    top: 10px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#score {
+    left: 10px;
+}
+
+#lives {
+    right: 10px;
+}
+
+/* Círculos */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.circle.clicked {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+/* Tela de fim de jogo */
+#endScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#restartButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restartButton:hover {
+    background-color: #21a1f1;
+}
